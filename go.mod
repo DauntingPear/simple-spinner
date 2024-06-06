@@ -1,3 +1,3 @@
-module github.com/dauntingpear/simple-spinner
+module github.com/dauntingpear/spinner
 
 go 1.22.2
