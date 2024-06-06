@@ -38,6 +38,7 @@ func (s *spinner) Start() {
 func (s *spinner) Stop() {
 	s.done <- true
 	s.ticks.Stop()
+	fmt.Print("\r")
 	show()
 }
 
@@ -50,7 +51,6 @@ outer:
 		fmt.Print("\r", s.message)
 		select {
 		case <-s.done:
-			fmt.Print("\r")
 			break outer
 		case <-s.ticks.C:
 			s.renderFrame(true)
