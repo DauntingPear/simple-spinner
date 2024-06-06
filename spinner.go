@@ -2,7 +2,6 @@ package simplespinner
 
 import (
 	"fmt"
-	"simple-spinner/animation"
 	"time"
 )
 
@@ -20,8 +19,8 @@ type Spinner interface {
 	Stop()
 }
 
-func NewSpinner(message string, a animation.Animation) *spinner {
-	duration, chars := animation.GetAnimation(a)
+func NewSpinner(message string, a Animation) *spinner {
+	duration, chars := GetAnimation(a)
 	return &spinner{
 		message:       message,
 		chars:         chars,
