@@ -1,4 +1,4 @@
-package simplespinner
+package spinner
 
 import (
 	"fmt"
