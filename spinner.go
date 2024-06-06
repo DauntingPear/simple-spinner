@@ -44,10 +44,10 @@ func (s *spinner) Stop() {
 func (s *spinner) render() {
 
 	hide()
-	fmt.Print(s.message)
 
 outer:
 	for {
+		fmt.Print("\r", s.message)
 		select {
 		case <-s.done:
 			fmt.Print("\r")
